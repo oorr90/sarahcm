@@ -16,6 +16,21 @@ add_action( 'wp_enqueue_scripts', 'scm_script_enqueue');
 
 /*-----------------------
 
+GOOGLE FONTS
+
+-----------------------*/
+function custom_add_google_fonts() {
+    wp_register_style( 'google', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700', array(), null, 'all' );
+    wp_enqueue_style('google');
+}
+
+add_action('wp_enqueue_scripts', 'custom_add_google_fonts');
+
+
+
+
+/*-----------------------
+
 ACTIVATE MENUS
 
 -----------------------*/
@@ -120,6 +135,12 @@ function scm_widget_setup() {
 }
 
 add_action( 'widgets_init', 'scm_widget_setup');
+
+
+/**
+ * Enable featured images
+ */
+add_theme_support( 'post-thumbnails' );
 
 
 

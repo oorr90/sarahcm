@@ -118,6 +118,55 @@ header img {
 
 
 
+/**************************************
+
+FRONT PAGE
+
+**************************************/
+
+/*-----------------------
+
+SUB HEAD
+
+-----------------------*/
+
+.sub-head-home {
+	font-size: 1.75em;
+	letter-spacing: 1.5px;
+	padding: 70px 0 70px 70px;
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(left, #f6f6f6 56%, #fc618f 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #f6f6f6 56%,#fc618f 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #f6f6f6 56%,#fc618f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#fc618f',GradientType=1 ); /* IE6-9 */
+}
+
+.sub-head-tagline {
+	margin-top: 30px;
+}
+
+.sub-head-tagline p {
+	text-transform: uppercase;
+	color: #fc618f;
+	font-weight: 400;
+	margin: 0;
+}
+
+
+/*-----------------------
+
+INTRODUCTORY PARAGRAPH
+
+-----------------------*/
+
+.home-intro {
+	background-color: #2c3e50;
+	color: #fff;
+}
+
+.intro-image {
+	border-radius: 100%;
+}
 
 
 
