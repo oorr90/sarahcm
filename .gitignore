@@ -1,0 +1,3 @@
+# Ignore images in assets folder
+
+assets/img/*
