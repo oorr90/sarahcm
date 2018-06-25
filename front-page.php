@@ -12,20 +12,55 @@
 </div>
 
 <div class="home-intro">
-<?php
+	<?php
 
-	if ( have_posts() ):
+		if ( have_posts() ):
 
-		while( have_posts() ): the_post(); ?>
+			while( have_posts() ): the_post(); ?>
 
-			<?php the_post_thumbnail( 'medium', array('class'=>'intro-image') ); ?>
-			<p><?php the_content(); ?></p>
+				<?php the_post_thumbnail( 'medium', array('class'=>'intro-image') ); ?>
 
-		<?php endwhile;
+				<div class="home-intro-content"><p><?php the_content(); ?></p></div>
 
-	endif;
+			<?php endwhile;
+
+		endif;
 
 	?>
+</div>
+
+<div class="home-highlights">
+
+	<?php while ( have_posts() ) : the_post(); ?>
+
+		<div class="single-highlight">
+
+			<?php 
+
+				//var_dump(get_field('highlight_image'));
+				$image = get_field('highlight_image');
+
+				// vars
+				$url = $image['url'];
+				$alt = $image['alt'];
+				$caption = $image['caption'];
+
+				// image size
+				$thumb = $image['sizes'][ 'medium' ];
+
+			?>
+
+			<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" />
+
+			<h2><?php the_field('home_highlight_header'); ?></h2>
+
+			<p><?php the_field('home_highlight_text'); ?></p>
+
+		</div>
+
+	<?php endwhile; ?>
+	
+
 </div>
 
 <?php get_footer(); ?>

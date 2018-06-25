@@ -15,6 +15,7 @@
 		</header>
 		<!-- Primary Nav -->
 		<?php wp_nav_menu( array( 'theme_location'=>'primary' ) ); ?>
+		
 
 		<!-- begin inner wrapper -->
 		<div class="wrapper">

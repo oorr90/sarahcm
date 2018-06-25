@@ -162,6 +162,14 @@ INTRODUCTORY PARAGRAPH
 .home-intro {
 	background-color: #2c3e50;
 	color: #fff;
+	text-align: center;
+	padding: 75px 0;
+}
+
+.home-intro-content {
+	width: 50%;
+	margin: 40px auto 0;
+	line-height: 1.5;
 }
 
 .intro-image {
@@ -170,6 +178,25 @@ INTRODUCTORY PARAGRAPH
 
 
 
+/*-----------------------
 
+HIGHLIGHTS
+
+-----------------------*/
+
+.home-highlights {
+	background-color: #eee;
+	text-align: center;
+}
+
+.single-highlight {
+	width: 28%;
+	padding: 35px;
+}
+
+.single-highlight img {
+	max-width: 70%;
+	padding: 20px;
+}
 
 
