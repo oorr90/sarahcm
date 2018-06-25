@@ -29,38 +29,70 @@
 	?>
 </div>
 
-<div class="home-highlights">
+<div class="testing home-highlights">
+	
+	<?php
 
-	<?php while ( have_posts() ) : the_post(); ?>
+		/*
+		*  get all custom fields and print_r for testing
+		*/
+		$fields = get_field_objects();
+		echo "<!--";
+		//print_r( $fields ); 
+		echo "-->";
 
-		<div class="single-highlight">
+		/*
+		* Store headers, descriptions, and images in arrays
+		*/
+		$headers = array();
+		$descriptions = array();
+		$images = array();
 
-			<?php 
+		/*
+		*  get all custom fields, loop through them and create a label => value markup
+		*/
+		if( $fields ):
+		
+			foreach( $fields as $field_name => $field ):
+			
+				if ($field['type'] == 'text'):
 
-				//var_dump(get_field('highlight_image'));
-				$image = get_field('highlight_image');
+					array_push($headers, $field['value']);
 
-				// vars
-				$url = $image['url'];
-				$alt = $image['alt'];
-				$caption = $image['caption'];
+				elseif($field['type'] == 'textarea'):
 
-				// image size
-				$thumb = $image['sizes'][ 'medium' ];
+					array_push($descriptions, $field['value']);
 
-			?>
+				else:
 
-			<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" />
+					array_push($images, $field['value']);
 
-			<h2><?php the_field('home_highlight_header'); ?></h2>
+				endif;
+			endforeach;
+		endif;
 
-			<p><?php the_field('home_highlight_text'); ?></p>
+		echo "<!--";
+		print_r( $images ); 
+		echo "-->";
 
-		</div>
+		for($x = 0; $x < 3; $x++): ?>
 
-	<?php endwhile; ?>
+			<div class="single-highlight">
+
+				<img src="<?php echo $images[$x]['sizes']['medium']; ?>" alt="">
+
+				<h2><?php echo $headers[$x]; ?></h2>
+
+				<p><?php echo $descriptions[$x]; ?></p>
+
+			</div>
+
+		<?php endfor;
+
+	?>
 	
 
 </div>
+
 
 <?php get_footer(); ?>

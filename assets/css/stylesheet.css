@@ -185,13 +185,16 @@ HIGHLIGHTS
 -----------------------*/
 
 .home-highlights {
+	padding: 40px 0;
 	background-color: #eee;
 	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: none;
 }
 
 .single-highlight {
-	width: 28%;
-	padding: 35px;
+	width: 25%;
 }
 
 .single-highlight img {
