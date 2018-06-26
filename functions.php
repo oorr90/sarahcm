@@ -1,5 +1,7 @@
 <?php
 
+
+
 /*-----------------------
 
 ADD CSS AND JAVASCRIPT
@@ -20,7 +22,7 @@ GOOGLE FONTS
 
 -----------------------*/
 function custom_add_google_fonts() {
-    wp_register_style( 'google', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700', array(), null, 'all' );
+    wp_register_style( 'google', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,600i,700', array(), null, 'all' );
     wp_enqueue_style('google');
 }
 
