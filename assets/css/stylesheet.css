@@ -172,9 +172,16 @@ INTRODUCTORY PARAGRAPH
 	line-height: 1.5;
 }
 
+.home-intro-image {
+	margin: 0 auto;
+}
+
 .intro-image {
 	border-radius: 100%;
+	height: 240px;
+	width: 240px;
 }
+
 
 
 
@@ -185,7 +192,7 @@ HIGHLIGHTS
 -----------------------*/
 
 .home-highlights {
-	padding: 40px 0;
+	padding: 60px 0;
 	background-color: #eee;
 	text-align: center;
 	display: flex;

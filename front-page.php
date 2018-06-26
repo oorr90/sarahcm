@@ -18,7 +18,7 @@
 
 			while( have_posts() ): the_post(); ?>
 
-				<?php the_post_thumbnail( 'medium', array('class'=>'intro-image') ); ?>
+				<div class="home-intro-image"><?php the_post_thumbnail( 'medium', array('class'=>'intro-image') ); ?></div>
 
 				<div class="home-intro-content"><p><?php the_content(); ?></p></div>
 
@@ -29,20 +29,20 @@
 	?>
 </div>
 
-<div class="testing home-highlights">
+<div class="home-highlights">
 	
 	<?php
 
 		/*
-		*  get all custom fields and print_r for testing
+		*  Get all custom fields and print_r for testing
 		*/
 		$fields = get_field_objects();
-		echo "<!--";
+		//echo "<!--";
 		//print_r( $fields ); 
-		echo "-->";
+		//echo "-->";
 
 		/*
-		* Store headers, descriptions, and images in arrays
+		* Store headers, descriptions, and images in variables
 		*/
 		$headers = array();
 		$descriptions = array();
@@ -71,10 +71,9 @@
 			endforeach;
 		endif;
 
-		echo "<!--";
-		print_r( $images ); 
-		echo "-->";
-
+		/*
+		*  Print array contents inside single divs for display
+		*/
 		for($x = 0; $x < 3; $x++): ?>
 
 			<div class="single-highlight">
@@ -91,6 +90,21 @@
 
 	?>
 	
+</div>
+
+<div class="testimonials">
+
+	<?php 
+
+		$testimonialID = 1;
+		
+		if ( function_exists( 'strong_testimonials_view' ) ):
+
+	    	strong_testimonials_view( $testimonialID );
+
+		endif; 
+
+	?>
 
 </div>
 
