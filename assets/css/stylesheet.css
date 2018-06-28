@@ -17,7 +17,8 @@ body {
 	font-size: 100%;
 	box-sizing: border-box;
 	background-color: #fff;
-	color: #333;
+	color: #2c3e50;
+	line-height: 1.5;
 }
 
 h1,
@@ -26,7 +27,6 @@ h3,
 h4,
 h5,
 h6 {
-	color: #2c3e50;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
 	padding: 0;
@@ -169,7 +169,6 @@ INTRODUCTORY PARAGRAPH
 .home-intro-content {
 	width: 50%;
 	margin: 40px auto 0;
-	line-height: 1.5;
 }
 
 .home-intro-image {
@@ -205,6 +204,10 @@ HIGHLIGHTS
 	min-width: 260px;
 }
 
+.single-highlight p {
+	margin-top: 0;
+}
+
 .single-highlight img {
 	max-width: 70%;
 	padding: 20px;
@@ -225,12 +228,45 @@ BODY
 -----------------------*/
 
 .main-page {
-	padding: 100px 20px;
+	padding: 30px;
 	display: flex;
 }
 
 .col1 {
 	width: 85%;
+}
+
+.col1 p {
+	line-height: 2;
+	font-weight: 300;
+}
+
+.col2 {
+	text-align: center;
+}
+
+.col2 h2 {
+	color: rgba(44, 62, 80, .7);
+	margin-bottom: 8px;
+}
+
+.col2 #text-2 {
+	margin-top: 40px;
+
+}
+
+
+
+
+.services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.single-service {
+	width: 46%;
+	margin-top: 30px;
 }
 
 

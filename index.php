@@ -9,6 +9,16 @@
 
 		    	<p><?php the_content(); ?></p>
 
+		    	<?php 
+
+		    		if( is_page( 'Services' ) ):
+
+		    			get_template_part( 'partials/acf', 'services' );
+
+		    		endif;
+
+		    	?>
+
 		    <?php endwhile; ?>
 		<?php endif; ?>
 	</div>
