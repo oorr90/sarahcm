@@ -227,13 +227,18 @@ BODY
 
 -----------------------*/
 
+.page-intro {
+	font-size: 1.15em;
+}
+
 .main-page {
 	padding: 30px;
 	display: flex;
+	justify-content: space-between;
 }
 
 .col1 {
-	width: 85%;
+	width: 75%;
 }
 
 .col1 p {
@@ -256,7 +261,11 @@ BODY
 }
 
 
+/**************************************
 
+PARTIAL: SERVICES
+
+**************************************/
 
 .services {
 	display: flex;
