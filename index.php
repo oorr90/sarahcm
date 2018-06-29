@@ -17,6 +17,10 @@
 
 		    			get_template_part( 'partials/acf', 'services' );
 
+		    		elseif( is_page( 'Experience' ) ):
+
+		    			get_template_part( 'partials/acf', 'experience' );
+
 		    		endif;
 
 		    	?>

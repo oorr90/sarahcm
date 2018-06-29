@@ -231,6 +231,10 @@ BODY
 	font-size: 1.15em;
 }
 
+.page-intro a {
+	font-weight: bold;
+}
+
 .main-page {
 	padding: 30px;
 	display: flex;
@@ -263,9 +267,15 @@ BODY
 
 /**************************************
 
-PARTIAL: SERVICES
+PARTIALS
 
 **************************************/
+
+/*-----------------------
+
+SERVICES
+
+-----------------------*/
 
 .services {
 	display: flex;
@@ -276,6 +286,29 @@ PARTIAL: SERVICES
 .single-service {
 	width: 46%;
 	margin-top: 30px;
+}
+
+
+
+/*-----------------------
+
+EXPERIENCE
+
+-----------------------*/
+
+
+.single-experience {
+	margin-top: 30px;
+
+}
+
+.single-experience ul {
+	padding-left: 20px;
+	line-height: 2;
+}
+
+.single-experience li {
+	list-style-type: circle;
 }
 
 
