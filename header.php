@@ -14,8 +14,9 @@
 			<img alt="" src="<?php header_image(); ?>">
 		</header>
 		<!-- Primary Nav -->
-		<?php wp_nav_menu( array( 'theme_location'=>'primary' ) ); ?>
-		
+		<nav class="nav-primary">
+			<?php wp_nav_menu( array( 'theme_location'=>'primary' ) ); ?>
+		</nav>
 
 		<!-- begin inner wrapper -->
 		<div class="wrapper">

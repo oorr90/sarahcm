@@ -61,31 +61,65 @@ NAVIGATION
 .menu {
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
-
-}
-
-.menu a:hover {
-	color: #fc618f;
-}
-
-/* Primary Nav *******/
-
-.menu-main-nav-container {
-	background-color: #2c3e50;
+	font-size: .9em;
 }
 
 .current-menu-item a {
 	color: #fc618f;
 }
 
+.menu a:hover {
+	color: #fc618f;
+}
+
+/*-----------------------
+
+PRIMARY NAV
+
+-----------------------*/
+
+.nav-primary {
+	background-color: #2c3e50;
+	text-align: center;
+	padding: 15px 50px;
+}
+
+.menu-main-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-main-nav-container li {
+	display: inline-block;
+	position: relative; /* this is needed in order to position sub menus */ 
+	margin: 10px;
+}
+
+.menu-main-nav-container li a {
+	padding: 10px;
+}
+
+.menu-main-nav-container ul ul { /* this targets all sub menus */ 
+	display: none; /* hide all sub menus from view */ 
+	position: absolute; 
+} 
+.menu-main-nav-container ul ul li { /* this targets all submenu items */ 
+	/*width: 150px; /* set to the width you want your sub menus to be. This needs to match the value we set below */ 
+	background-color: #2c3e50;
+	padding: 12px;
+	margin-left: -10px;
+} 
+
+.menu-main-nav-container ul li:hover > ul { 
+	display: block; /* show sub menus when hovering over a parent */ 
+}
 
 
+/*-----------------------
 
+SECONDARY NAV
 
-
-
-
-/* Secondary Nav *******/
+-----------------------*/
 
 .menu-secondary-nav-container {
 	background-color: #f6f6f6;
@@ -303,6 +337,13 @@ EXPERIENCE
 
 -----------------------*/
 
+.linkedin {
+	color: #2c3e50;
+}
+
+.linkedin:hover {
+	color: #44607c;
+}
 
 .single-experience {
 	margin-top: 30px;

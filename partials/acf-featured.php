@@ -20,8 +20,6 @@
 
 	        	<p><?php the_sub_field('home_feature_description'); ?></p>
 
-
-
 	        </div>
 
 	    <?php endwhile;

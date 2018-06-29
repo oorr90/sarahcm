@@ -33,17 +33,7 @@
 
 <div class="testimonials">
 
-	<?php 
 
-		$testimonialID = 1;
-		
-		if ( function_exists( 'strong_testimonials_view' ) ):
-
-	    	strong_testimonials_view( $testimonialID );
-
-		endif; 
-
-	?>
 
 </div>
 

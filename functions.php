@@ -8,6 +8,7 @@ ADD CSS AND JAVASCRIPT
 
 -----------------------*/
 function scm_script_enqueue() {
+	wp_enqueue_style('normalize', get_stylesheet_directory_uri() . '/assets/css/normalize.css');
 	wp_enqueue_style( 'customstyle', get_template_directory_uri() . '/assets/css/stylesheet.css', array(), '1.0.0', 'all' );
 	wp_enqueue_script( 'customjs', get_template_directory_uri() . '/assets/js/script.js', array(), '1.0.0', true );
 }
@@ -27,7 +28,6 @@ function custom_add_google_fonts() {
 }
 
 add_action('wp_enqueue_scripts', 'custom_add_google_fonts');
-
 
 
 
