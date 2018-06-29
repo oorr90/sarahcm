@@ -35,7 +35,7 @@ h6 {
 
 a {
 	text-decoration: none;
-	color: #2c3e50;
+	color: #fff;
 }
 
 ul {
@@ -74,9 +74,15 @@ NAVIGATION
 	background-color: #2c3e50;
 }
 
-.menu-main-nav-container li a {
-	color: #fff;
+.current-menu-item a {
+	color: #fc618f;
 }
+
+
+
+
+
+
 
 
 /* Secondary Nav *******/
@@ -108,7 +114,7 @@ header {
 	padding: 65px 0;
 }
 header img {
-	max-width: 80%;
+	max-width: 60%;
 }
 
 
@@ -236,6 +242,7 @@ BODY
 }
 
 .main-page {
+	margin: 30px 0;
 	padding: 30px;
 	display: flex;
 	justify-content: space-between;
@@ -309,6 +316,34 @@ EXPERIENCE
 
 .single-experience li {
 	list-style-type: circle;
+}
+
+
+
+
+/*-----------------------
+
+CONTACT
+
+-----------------------*/
+
+input[type="text"],
+input[type="email"],
+textarea
+{
+    background-color: #fff;
+    color: #000;
+    width: 80%;
+}
+
+input[type="submit"] {
+	background-color: #2c3e50;
+	color: #fff;
+	border: none;
+	text-transform: uppercase;
+	padding: 10px 12px;
+	font-size: .8em;
+	letter-spacing: 2px;
 }
 
 

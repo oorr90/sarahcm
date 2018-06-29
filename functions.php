@@ -49,7 +49,6 @@ function scm_theme_setup() {
 add_action( 'init', 'scm_theme_setup');
 
 
-
 /*-----------------------
 
 GET RID OF IMPORTANT ABOVE HEADER BECAUSE WHY IS IT THERE??
@@ -143,6 +142,8 @@ add_action( 'widgets_init', 'scm_widget_setup');
  * Enable featured images
  */
 add_theme_support( 'post-thumbnails' );
+
+
 
 
 
