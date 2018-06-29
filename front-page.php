@@ -29,68 +29,7 @@
 	?>
 </div>
 
-<div class="home-highlights">
-	
-	<?php
-
-		/*
-		*  Get all custom fields and print_r for testing
-		*/
-		$fields = get_field_objects();
-		//echo "<!--";
-		//print_r( $fields ); 
-		//echo "-->";
-
-		/*
-		* Store headers, descriptions, and images in variables
-		*/
-		$headers = array();
-		$descriptions = array();
-		$images = array();
-
-		/*
-		*  get all custom fields, loop through them and create a label => value markup
-		*/
-		if( $fields ):
-		
-			foreach( $fields as $field_name => $field ):
-			
-				if ($field['type'] == 'text'):
-
-					array_push($headers, $field['value']);
-
-				elseif($field['type'] == 'textarea'):
-
-					array_push($descriptions, $field['value']);
-
-				else:
-
-					array_push($images, $field['value']);
-
-				endif;
-			endforeach;
-		endif;
-
-		/*
-		*  Print array contents inside single divs for display
-		*/
-		for($x = 0; $x < 3; $x++): ?>
-
-			<div class="single-highlight">
-
-				<img src="<?php echo $images[$x]['sizes']['medium']; ?>" alt="">
-
-				<h2><?php echo $headers[$x]; ?></h2>
-
-				<p><?php echo $descriptions[$x]; ?></p>
-
-			</div>
-
-		<?php endfor;
-
-	?>
-	
-</div>
+<?php get_template_part( 'partials/acf', 'featured' ); ?>
 
 <div class="testimonials">
 
