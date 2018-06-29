@@ -319,6 +319,27 @@ EXPERIENCE
 }
 
 
+/*-----------------------
+
+RESOURCES
+
+-----------------------*/
+
+.resources {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.single-resource {
+	width: 45%;
+	margin-top: 30px;
+}
+
+.single-resource img {
+	max-width: 100%;
+	margin-top: 20px;
+}
 
 
 /*-----------------------
