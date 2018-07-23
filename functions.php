@@ -146,6 +146,339 @@ add_theme_support( 'post-thumbnails' );
 
 
 
+/*-----------------------
+
+REGISTER ACFs
+
+-----------------------*/
+
+
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_experiences',
+		'title' => 'Experiences',
+		'fields' => array (
+			array (
+				'key' => 'field_5b357249d2ce4',
+				'label' => 'Experience',
+				'name' => 'experience',
+				'type' => 'repeater',
+				'instructions' => 'List experience details here',
+				'required' => 1,
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5b357264d2ce5',
+						'label' => 'Experience Header',
+						'name' => 'experience_header',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5b35728ad2ce6',
+						'label' => 'Experience List Item',
+						'name' => 'experience_list_item',
+						'type' => 'repeater',
+						'column_width' => '',
+						'sub_fields' => array (
+							array (
+								'key' => 'field_5b3572a7d2ce7',
+								'label' => 'Experience Item',
+								'name' => 'experience_item',
+								'type' => 'text',
+								'instructions' => 'List experience items here',
+								'column_width' => '',
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'formatting' => 'html',
+								'maxlength' => '',
+							),
+						),
+						'row_min' => '',
+						'row_limit' => '',
+						'layout' => 'table',
+						'button_label' => 'Add Row',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '27',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_home-features',
+		'title' => 'Home Features',
+		'fields' => array (
+			array (
+				'key' => 'field_5b358fb6c9547',
+				'label' => 'Home Features',
+				'name' => 'home_features',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5b358fccc9549',
+						'label' => 'Home Feature Image',
+						'name' => 'home_feature_image',
+						'type' => 'image',
+						'required' => 1,
+						'column_width' => '',
+						'save_format' => 'object',
+						'preview_size' => 'thumbnail',
+						'library' => 'all',
+					),
+					array (
+						'key' => 'field_5b358fc0c9548',
+						'label' => 'Home Feature Title',
+						'name' => 'home_feature_title',
+						'type' => 'text',
+						'required' => 1,
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5b358fe5c954a',
+						'label' => 'Home Feature Description',
+						'name' => 'home_feature_description',
+						'type' => 'textarea',
+						'required' => 1,
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'maxlength' => '',
+						'rows' => 4,
+						'formatting' => 'br',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '5',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_resources',
+		'title' => 'Resources',
+		'fields' => array (
+			array (
+				'key' => 'field_5b3642f1374e6',
+				'label' => 'Resources',
+				'name' => 'resources',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5b3642f9374e7',
+						'label' => 'Resource Name',
+						'name' => 'resource_name',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5b36430d374e8',
+						'label' => 'Resource Image',
+						'name' => 'resource_image',
+						'type' => 'image',
+						'column_width' => '',
+						'save_format' => 'object',
+						'preview_size' => 'thumbnail',
+						'library' => 'all',
+					),
+					array (
+						'key' => 'field_5b36431c374e9',
+						'label' => 'Resource URL',
+						'name' => 'resource_url',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => 'http://',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '11',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_services',
+		'title' => 'Services',
+		'fields' => array (
+			array (
+				'key' => 'field_5b329c8b69244',
+				'label' => 'Services List',
+				'name' => 'services_list',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5b329c9b69245',
+						'label' => 'Service Title',
+						'name' => 'service_title',
+						'type' => 'text',
+						'instructions' => 'Enter the service title',
+						'required' => 1,
+						'column_width' => 0,
+						'default_value' => '',
+						'placeholder' => 'Please type here...',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_5b329cd75b454',
+						'label' => 'Services description',
+						'name' => 'services_description',
+						'type' => 'textarea',
+						'instructions' => 'Please enter a description of the service',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => 'Enter the description here...',
+						'maxlength' => '',
+						'rows' => '',
+						'formatting' => 'br',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '9',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_testimonials',
+		'title' => 'Testimonials',
+		'fields' => array (
+			array (
+				'key' => 'field_5b3659feed6ce',
+				'label' => 'Testimonials',
+				'name' => 'testimonials',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '5',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
 
 
 ?>
